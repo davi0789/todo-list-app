@@ -5,7 +5,7 @@ const Checkbox = props => {
     onChange,
     data: { id, description, done }
   } = props;
-
+  console.log(props.data);
   return (
     <Fragment>
       <label className="todo new-item">
@@ -13,10 +13,10 @@ const Checkbox = props => {
           className="todo__state"
           name={id}
           type="checkbox"
-          checked={done} // Cambiado de defaultChecked a checked
+          checked={done}
           onChange={onChange}
         />
-        <div className="todo__text">{description}</div>
+        <div className="todo__text">{description}</div> {/* Descripción de la tarea */}
       </label>
     </Fragment>
   );
